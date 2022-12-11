@@ -2,29 +2,76 @@ let input = document.querySelector(".form-control"); // input
 let addInput = document.querySelector(".plus"); //plus button
 let addTodo = document.querySelector(".list"); //ad to do
 let listGroup = document.querySelector(".list-group"); //ul
+// let greyDown = document.querySelector(".down1")
+// let greyUpper = document.querySelector(".upper1")
+// let blackDown = document.querySelector(".down2")
+// let blackUpper = document.querySelector(".upper2")
+let deleteBtnPink = document.querySelector('.delete-pink')
+let deleteBtnGrey = document.querySelector('.delete-grey')
 
+//sasasa
 addTodo.addEventListener("click", () => {
-  
+
   if (input.value.trim() != "") {
     listGroup.innerHTML += `<li class="list-group-items"> <span class="todo-text">${input.value}</span>
-    <div class="delete-todo"><img src="/icons/Group 77.svg" alt=""><img src="/icons/Group 70.svg"
+    <div class="delete-todo"><img class="delete-grey" src="/praktika2/icons/Group 70.svg" alt=""><img class="delete-pink" src="/praktika2/icons/Group 77.svg"
             alt=""></div>
 </li>`;
-
     input.value = "";
   } else {
     alert("to do elave edin");
   }
 });
 
-// document.querySelector(".delete-todo").addEventListener("click", () => {console.log('deleted')});
+
 document.body.addEventListener("click", (e) => {
-if(e.target.classList.contains("delete-todo")){
-  e.target.parentElement.remove()
-}
+  if (e.target.classList.contains("delete-todo")) {
+    e.target.parentElement.remove()
+  }
 
 });
-input.addEventListener("click", () => {
-  input.placeholder.onfocus = none;
+deleteBtnPink.addEventListener("mouseover", (event) => {
+  event.target.style.display = "none"
+})
+// asagiBoz.addEventListener("mouseover", (event) => {
+//   event.target.style.display = "none"
+//   asagiQara.style.display = "block"
+// });
+// asagiQara.addEventListener("mouseout", (event) => {
+//   event.target.style.display = "none"
+//   asagiBoz.style.display = "block"
+// });
+// asagiQara.addEventListener("click", () => {
+//   asagiBoz.style.display = "none";
+//   asagiQara.style.display = "none"
+//   yuxariQara.style.display = "block"
+// });
 
-});
+addTodo.addEventListener('click', (event) => {
+  if (input.value.trim() != "") {
+    greyDown.style.display = "block"
+
+  }
+})
+
+// sortLiIconUpperGrey.addEventListener("mouseover", () => {
+//   sortLiIconUpperGrey.style.display = "none"
+//   sortLiIconUpperBlack.style.display = "block"
+// });//+
+// sortLiIconDownBlack.addEventListener("click", () => {
+//   sortLiIconDownBlack.style.display = "none"
+//   sortLiIconUpperBlack.style.display = "block"
+// });
+// sortLiIconUpperBlack.addEventListener("click", () => {
+//   sortLiIconUpperBlack.style.display = "none"
+//   sortLiIconDownBlack.style.display = "block"
+// });
+// sortLiIconUpperBlack.addEventListener("mouseout", () => {
+//   sortLiIconUpperBlack.style.display = "none"
+//   sortLiIconUpperGrey.style.display = "block"
+// });//+
+// sortLiIconDownBlack.addEventListener("mouseout", () => {
+//   sortLiIconDownBlack.style.display = "none"
+//   sortLiIconDownGrey.style.display = "block"
+// });//+
+
