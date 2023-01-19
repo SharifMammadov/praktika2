@@ -5,7 +5,6 @@ body {
 }
 .container {
   width: 336px;
-
   background-color: white;
   position: absolute;
   border-radius: 10px;
@@ -31,7 +30,6 @@ body {
   position: relative;
 }
 .down2,
-.down1,
 .upper1,
 .upper2 {
   display: none;
@@ -44,7 +42,7 @@ body {
   position: relative;
   width: 236px;
   margin-left: 50px;
-  height: 20px;
+  height: 24px;
   border: solid 2px;
   border-radius: 20px;
   padding-left: 10px;
@@ -72,7 +70,7 @@ body {
   position: absolute;
   border-radius: 35px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
   background-color: rgb(99, 12, 170);
 }
 .list-group {
@@ -91,6 +89,7 @@ body {
 .delete-grey{
 position: absolute;
 z-index: -1; 
-
-
+}
+.btns{
+  padding-top: 10px;
 }
